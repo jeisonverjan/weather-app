@@ -1,13 +1,117 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --color1: #122f4f;
+  --color2: #124a6d;
+  --color3: #157590;
+  --color4: #1aa3b4;
+  --color5: #20dbd2;
+  --text: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: var(--color1);
+  color: var(--text);
+}
+
+.main-container {
+  width: 80%;
+  border-top: 0.3rem solid;
+  border-left: 0.3rem solid;
+  border-right: 0.3rem solid;
+  margin: 5% auto;
+}
+
+.container {
+  font-size: 2rem;
+  background-color: var(--color2);
+}
+
+.header-container {
+  border-bottom: 0.3rem solid;
+  text-align: center;
+  padding: 0.5em;
+  letter-spacing: 0.5em;
+}
+
+.header-container input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.7em;
+  background-color: var(--color4);
+  border-radius: 1em;
+  margin: 1em;
+  width: 25rem;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.header-container input:focus {
+  outline: 2px solid var(--color5);
+  box-shadow: 0rem 0.5rem 0.5rem var(--color5);
+}
+
+::placeholder {
+  color: var(--text);
+  font-family: inherit;
+  letter-spacing: 0.2em;
+}
+
+.no-border {
+  border-bottom: none;
+}
+.border {
+  border-bottom: 0.3rem solid;
+}
+
+.weather-container {
+  text-align: center;
+  letter-spacing: 0.2em;
+  background-color: var(--color3);
+}
+
+.weather-container h2 {
+  padding: 1.5rem 1.5rem 0rem 1.5rem;
+}
+
+.weather-list {
+  display: grid;
+  gap: 2rem;
+  grid-auto-rows: 25rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  padding: 2rem;
+}
+
+.day-container {
+  background-color: var(--color4);
+  list-style-type: none;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  outline: 2px solid var(--color5);
+  border-radius: 1em;
+  box-shadow: 0.5rem 1rem 1rem var(--color5);
+}
+
+.day-container span {
+  font-size: 5rem;
+}
+
+.loader {
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem;
+  font-weight: bold;
 }
