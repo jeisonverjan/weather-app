@@ -115,3 +115,9 @@ body {
   padding: 2rem;
   font-weight: bold;
 }
+
+@media screen and (max-width: 580px) {
+  .main-container {
+    width: 100%;
+  }
+}
